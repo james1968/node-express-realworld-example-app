@@ -37,7 +37,8 @@ if(isProduction){
   mongoose.connect('mongodb://localhost/conduit');
   mongoose.set('debug', true);
 }
-
+require('./models/User');
+require('./config/passport');
 app.use(require('./routes'));
 
 /// catch 404 and forward to error handler
